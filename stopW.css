@@ -1,0 +1,208 @@
+*{
+    margin:0 auto;
+    padding:0 auto;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right,#9cecfb,#65c7f7,#0052d4);
+}
+.text-center{
+    text-align: center;
+}
+
+/* Heading */
+h1{
+    color: White;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 4%;
+}
+
+/* --------------------------------------------StopWatch Main Container-------------------------------------------------- */
+
+#stopwatch-container{
+    background:white;
+    width: 40%;
+    min-width: 400px;
+    position: absolute;
+    top:30vh;
+    left:30vw;
+    padding: 20px 0;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px black;
+}
+
+/* StopWatch Timer */
+
+#timer{
+    position: relative;
+    top:4%;
+    width: 90%;
+    height: 100px;
+    padding: 20px;
+    background-color: white;
+    color:#234a91;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: monospace;
+    font-size:35px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px cyan;
+}
+
+
+/* --------------------------------------------Click Buttons CSS -------------------------------------------------- */
+
+#buttons{
+    margin: 40px;
+    display: flex;
+}
+#buttons button{
+    cursor: pointer;
+    font-size: 20px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+.btn {
+    background: rgb(0,172,238);
+  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    
+  }
+  .btn span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn:before,
+  .btn:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+     background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .btn:before {
+    height: 0%;
+    width: 2px;
+  }
+  .btn:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn:hover{
+     background: transparent;
+    box-shadow: none;
+  }
+  .btn:hover:before {
+    height: 100%;
+  }
+  .btn:hover:after {
+    width: 100%;
+  }
+  .btn span:hover{
+     color: rgba(2,126,251,1);
+  }
+  .btn span:before,
+  .btn span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+     background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .btn span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .btn span:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn span:hover:before {
+    height: 100%;
+  }
+  .btn span:hover:after {
+    width: 100%;
+  }
+
+
+/* --------------------------------------------Media Queries-------------------------------------------------- */
+
+@media only screen and (max-width: 1200px){
+    #stopwatch-container{
+        width: 35%;
+        top:30vh;
+        left: 30vw;
+    }
+    #timer{
+        font-size: 32px;
+    }
+}
+@media only screen and (max-width: 800px){
+    #stopwatch-container{
+        width: 30%;
+        top:30vh;
+        left: 20vw;
+    }
+    #buttons button{
+        width: 110px;
+        height: 55px;
+    }
+    #timer{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 500px){
+    #stopwatch-container{
+        width: 25%;
+        top:30vh;
+        left: 7vh;
+    }
+}
+
+
+@property --angle{
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+}
+@property --gradX{
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+}
+@property --gradY{
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+}
