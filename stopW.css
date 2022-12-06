@@ -6,6 +6,9 @@
 }
 body{
     background: linear-gradient(to right,#9cecfb,#65c7f7,#0052d4);
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 .text-center{
     text-align: center;
@@ -26,7 +29,7 @@ h1{
     min-width: 400px;
     position: absolute;
     top:30vh;
-    left:30vw;
+    /* left:30vw; */
     padding: 20px 0;
     padding-bottom: 50px;
     border-radius: 10px;
@@ -161,8 +164,6 @@ h1{
 @media only screen and (max-width: 1200px){
     #stopwatch-container{
         width: 35%;
-        top:30vh;
-        left: 30vw;
     }
     #timer{
         font-size: 32px;
@@ -171,8 +172,6 @@ h1{
 @media only screen and (max-width: 800px){
     #stopwatch-container{
         width: 30%;
-        top:30vh;
-        left: 20vw;
     }
     #buttons button{
         width: 110px;
@@ -182,12 +181,14 @@ h1{
         font-size: 30px;
     }
 }
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 600px) {
     #stopwatch-container{
-        width: 25%;
-        top:30vh;
-        left: 7vh;
+        width: 20%;
+        /* left: 1px; */
     }
+    #timer{
+      font-size: 25px;
+  }
 }
 
 
